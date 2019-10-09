@@ -1,0 +1,9 @@
+@using Places.Models;
+
+<h1>Places</h1>
+@if (Model.)
+<ol> @foreach (Places place in Model)
+    {
+        <li>@place.cityName</li>
+    }
+</ol>
