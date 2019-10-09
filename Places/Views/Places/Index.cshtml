@@ -1,9 +1,13 @@
 @using Places.Models;
 
 <h1>Places</h1>
-@if (Model.)
-<ol> @foreach (Places place in Model)
+@if (Model.Count == 0)
+{
+    <p>You have not been anywhere, pleb</p>
+}
+<ul> @foreach (Place place in Model)
     {
-        <li>@place.cityName</li>
+        <li><a href='/places/@place.Id'>@place.CityName</a></li>
     }
-</ol>
+</ul>
+<a href="/places/new">Add a new place.</a>
